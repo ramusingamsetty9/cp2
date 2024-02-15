@@ -20,6 +20,18 @@ for iface in "${interfaces[@]}"; do
 	echo "$iface"
 done
 
+# Prompt the user to select a network interface
+read -p "Enter the network interface you want to get the IP address from: " selected_interface
+
+# Check if the selected interface is valid
+if [[ ! " ${interfaces[@]} " =~ " ${selected_interface} " ]]; then
+    echo "Invalid network interface. Exiting."
+    exit 1
+fi
+
+# Get and display the IP address of the selected interface
+ip_address=$(ip -4 addr show "$selected_interface" | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
+echo "IP Address of $selected_interface: $ip_address"
 
 #Recon
 nmap -sC -sV -A 
