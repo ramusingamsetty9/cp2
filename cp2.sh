@@ -38,4 +38,8 @@ cd $folder_name
 echo "Running Recon..."
 #Recon
 nmap -sC -sV -A $ip_address | cat > nmap_scan.txt
+echo "network data stored to nmap_scan.txt"
+
+arp-scan --localnet --interface=$iface | cat > devices.txt
+echo "attack surface analysed and stored to devices.txt" 
 
