@@ -33,5 +33,9 @@ fi
 ip_address=$(ip -4 addr show "$selected_interface" | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
 echo "IP Address of $selected_interface: $ip_address"
 
+cd folder_name
+
+echo "Running Recon..."
 #Recon
-nmap -sC -sV -A 
+nmap -sC -sV -A ip_address | cat > nmap_scan.txt
+
