@@ -2,6 +2,17 @@
 
 echo "The script started execution"
 
+#deletion of existing folder
+echo"Do you want to delete previous data?"
+read -p "Do you want to continue? (yes/no): " answer
+
+if [[ "$answer" =~ ^[Yy][Ee][Ss]$ ]]; then
+    	rm -r RTA_*
+elif [[ "$answer" =~ ^[Nn][Oo]$ ]]; then
+    echo"please backup the files"
+else
+    echo "Invalid response. Please enter 'yes' or 'no'."
+fi
 #Creation of new  folder
 folder_name="RTA_$(date +\%Y\%m\%d_\%H\%M\%S)"
 mkdir "$folder_name"
@@ -9,8 +20,8 @@ mkdir "$folder_name"
 #creation of new  folder
 echo "Folder '$folder_name' created."
 
-#deletion of existing folder
-rm -r RTA_*
+
+
 echo "The previous folder & Data are deleted..!"
 
 #Gathering Ip address:
@@ -37,7 +48,7 @@ cd $folder_name
 
 echo "Running Recon..."
 #Recon
-nmap -sC -sV -A $ip_address | cat > nmap_scan.txt
+nmap -sC -sV -A "$ip_address"/16 | cat > nmap_scan.txt
 echo "network data stored to nmap_scan.txt"
 
 arp-scan --localnet --interface=$iface | cat > devices.txt
