@@ -37,5 +37,5 @@ cd $folder_name
 
 echo "Running Recon..."
 #Recon
-nmap -sC -sV -A $ip_address/24 | cat > nmap_scan.txt
+nmap -sC -sV -A $ip_address | cat > nmap_scan.txt
 
