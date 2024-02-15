@@ -48,7 +48,8 @@ cd $folder_name
 
 echo "Running Recon..."
 #Recon
-nmap -sC -sV -A "$ip_address"/16 | cat > nmap_scan.txt
+read -p "enter the CIDR range subnet" cidr
+nmap -sC -sV -A "$ip_address"/$cidr | cat > nmap_scan.txt
 echo "network data stored to nmap_scan.txt"
 
 arp-scan --localnet --interface=$iface | cat > devices.txt
