@@ -10,7 +10,7 @@ mkdir "$folder_name"
 echo "Folder '$folder_name' created."
 
 #deletion of existing folder
-rm RTA_*
+rm -r RTA_*
 echo "The previous folder & Data are deleted..!"
 
 #Gathering Ip address:
