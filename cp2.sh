@@ -60,26 +60,12 @@ echo "attack surface analysed and stored to devices.txt"
 
 #web service identification
 echo "web servers are being analysed"
-output_file=web.txt
-nmap -p 80 --open --max-retries 1 -T4 "$ip_address"/$cidr -oG - | awk '/ 80\/open/ {print $2}' > "$output_file"
+nmap --open -p 80 192.168.1.1/24 |grep -E -o "([0-9]{1,3}\.){3}[0-9]{1,3}"| awk '!seen[$0]++' | cat > web.txt 
 
 #web security testing
+nuclei -l web.txt -t http/ | cat > web_security_report.txt
+echo "All Web app scans completed."
 
-# Specify the input file containing IP addresses
-input_file="web.txt"
-
-# Specify the output directory
-output_directory="nikto_reports"
-
-# Create the output directory if it doesn't exist
-mkdir -p "$output_directory"
-
-# Run Nikto scan for each IP address in the input file
-while IFS= read -r ip; do
-    output_file="$output_directory/${ip}_web.txt"
-    nikto -h "$ip" -o "$output_file"
-    echo "Nikto scan for $ip completed. Report saved in '$output_file'."
-done < "$input_file"
-
-echo "All Nikto scans completed. Reports saved in the '$output_directory' directory."
-
+#Web directory testing
+mkdir web_dir
+cd web_dir
