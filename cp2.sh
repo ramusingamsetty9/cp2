@@ -48,10 +48,38 @@ cd $folder_name
 
 echo "Running Recon..."
 #Recon
-read -p "enter the CIDR range subnet" cidr
+read -p "enter the CIDR range subnet: " cidr
 nmap -sC -sV -A "$ip_address"/$cidr | cat > nmap_scan.txt
 echo "network data stored to nmap_scan.txt"
+#critical ports open
+nmap -sC -sV -T4 -open -Pn -p 21,22,3306,3389,445,143 192.168.1.0/24 "$ip_address"/$cidr | cat > critical.txt
 
 arp-scan --localnet --interface=$iface | cat > devices.txt
+
 echo "attack surface analysed and stored to devices.txt" 
+
+#web service identification
+echo "web servers are being analysed"
+output_file=web.txt
+nmap -p 80 --open --max-retries 1 -T4 "$ip_address"/$cidr -oG - | awk '/ 80\/open/ {print $2}' > "$output_file"
+
+#web security testing
+
+# Specify the input file containing IP addresses
+input_file="web.txt"
+
+# Specify the output directory
+output_directory="nikto_reports"
+
+# Create the output directory if it doesn't exist
+mkdir -p "$output_directory"
+
+# Run Nikto scan for each IP address in the input file
+while IFS= read -r ip; do
+    output_file="$output_directory/${ip}_web.txt"
+    nikto -h "$ip" -o "$output_file"
+    echo "Nikto scan for $ip completed. Report saved in '$output_file'."
+done < "$input_file"
+
+echo "All Nikto scans completed. Reports saved in the '$output_directory' directory."
 
