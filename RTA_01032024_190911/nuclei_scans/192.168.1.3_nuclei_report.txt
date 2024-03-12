@@ -1,0 +1,18 @@
+[options-method] [http] [info] http://192.168.1.3 ["GET,POST,OPTIONS,HEAD"]
+[apache-detect] [http] [info] http://192.168.1.3 ["Apache/2.4.58 (Debian)"]
+[default-apache-test-all] [http] [info] http://192.168.1.3 ["Apache/2.4.58 (Debian)"]
+[default-apache2-page] [http] [info] http://192.168.1.3
+[http-missing-security-headers:x-content-type-options] [http] [info] http://192.168.1.3
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] http://192.168.1.3
+[http-missing-security-headers:clear-site-data] [http] [info] http://192.168.1.3
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] http://192.168.1.3
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] http://192.168.1.3
+[http-missing-security-headers:strict-transport-security] [http] [info] http://192.168.1.3
+[http-missing-security-headers:permissions-policy] [http] [info] http://192.168.1.3
+[http-missing-security-headers:x-frame-options] [http] [info] http://192.168.1.3
+[http-missing-security-headers:referrer-policy] [http] [info] http://192.168.1.3
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] http://192.168.1.3
+[http-missing-security-headers:content-security-policy] [http] [info] http://192.168.1.3
+[apache-server-status] [http] [low] http://192.168.1.3/server-status
+[server-status-localhost] [http] [low] http://192.168.1.3/server-status
+[waf-detect:apachegeneric] [http] [info] http://192.168.1.3/

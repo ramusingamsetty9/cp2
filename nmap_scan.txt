@@ -1,0 +1,142 @@
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-03 13:05 IST
+Nmap scan report for 192.168.1.1
+Host is up (0.015s latency).
+Not shown: 985 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE         VERSION
+21/tcp   filtered ftp
+22/tcp   filtered ssh
+23/tcp   filtered telnet
+49/tcp   filtered tacacs
+53/tcp   open     domain          Cloudflare public DNS
+80/tcp   open     http
+139/tcp  filtered netbios-ssn
+161/tcp  filtered snmp
+443/tcp  filtered https
+445/tcp  filtered microsoft-ds
+1079/tcp filtered asprovatalk
+3517/tcp filtered 802-11-iapp
+5566/tcp filtered westec-connect
+8082/tcp filtered blackice-alerts
+9009/tcp filtered pichat
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.94SVN%I=7%D=3/3%Time=65E4289B%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,1FB6,"HTTP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/html\r\n
+SF:Accept-Ranges:\x20bytes\r\nETag:\x20\"2667913807\"\r\nLast-Modified:\x2
+SF:0Fri,\x2024\x20Feb\x202023\x2007:29:53\x20GMT\r\nCache-Control:\x20no-c
+SF:ache,\x20no-store,\x20must-revalidate,\x20pre-check=0,\x20post-check=0,
+SF:max-age=0,\x20s-maxage=0\r\nExpires:\x200\r\nPragma:\x20no-cache\r\nStr
+SF:ict-Transport-Security:\x20max-age=15768000;\x20includeSubDomains\r\nCo
+SF:ntent-Length:\x207713\r\nConnection:\x20close\r\nDate:\x20Sun,\x2003\x2
+SF:0Mar\x202024\x2007:37:01\x20GMT\r\n\r\n<!DOCTYPE\x20html><html><head><m
+SF:eta\x20charset=utf-8><meta\x20name=viewport\x20content=\"width=device-w
+SF:idth,initial-scale=1\"><title></title><link\x20rel=\"shortcut\x20icon\"
+SF:\x20href=/favicon\.ico><link\x20href=/static/css/chunk-elementUI\.26ebf
+SF:fab\.css\x20rel=stylesheet><link\x20href=/static/css/chunk-libs\.e5400b
+SF:9a\.css\x20rel=stylesheet><link\x20href=/static/css/app\.9a13dd0d\.css\
+SF:x20rel=stylesheet></head><body><div\x20id=app></div><script>!function\(
+SF:c\){function\x20e\(e\){for\(var\x20u,h,k=e\[0\],d=e\[1\],t=e\[2\],r=0,o
+SF:=\[\];r<k\.length;r\+\+\)h=k\[r\],f\[h\]&&o\.pu")%r(HTTPOptions,142,"HT
+SF:TP/1\.0\x20200\x20OK\r\nAllow:\x20OPTIONS,\x20GET,\x20HEAD,\x20POST\r\n
+SF:Cache-Control:\x20no-cache,\x20no-store,\x20must-revalidate,\x20pre-che
+SF:ck=0,\x20post-check=0,max-age=0,\x20s-maxage=0\r\nExpires:\x200\r\nPrag
+SF:ma:\x20no-cache\r\nStrict-Transport-Security:\x20max-age=15768000;\x20i
+SF:ncludeSubDomains\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDat
+SF:e:\x20Sun,\x2003\x20Mar\x202024\x2007:37:02\x20GMT\r\n\r\n")%r(RTSPRequ
+SF:est,1DB,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/ht
+SF:ml\r\nContent-Length:\x20345\r\nConnection:\x20close\r\nDate:\x20Sun,\x
+SF:2003\x20Mar\x202024\x2007:37:02\x20GMT\r\n\r\n<\?xml\x20version=\"1\.0\
+SF:"\x20encoding=\"iso-8859-1\"\?>\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3
+SF:C//DTD\x20XHTML\x201\.0\x20Transitional//EN\"\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dt
+SF:d\">\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\"\x20xml:lang=\"e
+SF:n\"\x20lang=\"en\">\n\x20<head>\n\x20\x20<title>400\x20Bad\x20Request</
+SF:title>\n\x20</head>\n\x20<body>\n\x20\x20<h1>400\x20Bad\x20Request</h1>
+SF:\n\x20</body>\n</html>\n");
+
+Nmap scan report for 192.168.1.3
+Host is up (0.0041s latency).
+Not shown: 999 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.58 ((Debian))
+
+Nmap scan report for 192.168.1.4
+Host is up (0.0083s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT     STATE SERVICE         VERSION
+8008/tcp open  http?
+8009/tcp open  ssl/ajp13?
+8443/tcp open  ssl/https-alt?
+9000/tcp open  ssl/cslistener?
+
+Nmap scan report for 192.168.1.6
+Host is up (0.0075s latency).
+All 1000 scanned ports on 192.168.1.6 are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
+
+Nmap scan report for 192.168.1.7
+Host is up (0.013s latency).
+Not shown: 999 closed tcp ports (conn-refused)
+PORT      STATE SERVICE    VERSION
+62078/tcp open  tcpwrapped
+
+Nmap scan report for 192.168.1.10
+Host is up (0.012s latency).
+Not shown: 929 closed tcp ports (conn-refused), 68 filtered tcp ports (no-response), 2 filtered tcp ports (host-unreach)
+PORT      STATE SERVICE    VERSION
+62078/tcp open  tcpwrapped
+
+Nmap scan report for 192.168.1.11
+Host is up (0.029s latency).
+Not shown: 994 closed tcp ports (conn-refused)
+PORT      STATE SERVICE  VERSION
+1059/tcp  open  upnp     LG WebOS upnpd (WebOS 4.0.0; UPnP 1.0)
+1082/tcp  open  upnp
+3000/tcp  open  http     LG smart TV http service
+3001/tcp  open  ssl/http LG smart TV http service
+7000/tcp  open  rtsp     AirTunes rtspd 377.25.06
+11111/tcp open  vce?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port1082-TCP:V=7.94SVN%I=7%D=3/3%Time=65E4289F%P=x86_64-pc-linux-gnu%r(
+SF:GetRequest,5A9,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2001\x20Jan\x2
+SF:02000\x2005:00:29\x20GMT\r\nServer:\x20WebOS/1\.5\x20UPnP/1\.0\x20webOS
+SF:TV/1\.0\r\nContent-Length:\x201222\r\nContent-Type:\x20text/xml;\x20cha
+SF:rset=\"utf-8\"\r\nConnection:\x20close\r\nApplication-URL:\x20http://19
+SF:2\.168\.1\.11:36866/apps\r\n\r\n<\?xml\x20version=\"1\.0\"\x20encoding=
+SF:\"UTF-8\"\?>\r\n<root\x20xmlns=\"urn:schemas-upnp-org:device-1-0\"\x20x
+SF:mlns:dlna=\"urn:schemas-dlna-org:device-1-0\">\r\n\x20\x20<specVersion>
+SF:\r\n\x20\x20\x20\x20<major>1</major>\r\n\x20\x20\x20\x20<minor>0</minor
+SF:>\r\n\x20\x20</specVersion>\r\n\x20\x20<device>\r\n\x20\x20\x20\x20<dev
+SF:iceType>urn:dial-multiscreen-org:service:dial:1</deviceType>\r\n\x20\x2
+SF:0\x20\x20<friendlyName>SR\x20LG\x20TV</friendlyName>\r\n\x20\x20\x20\x2
+SF:0<manufacturer>LG\x20Electronics</manufacturer>\r\n\x20\x20\x20\x20<man
+SF:ufacturerURL>http://www\.lge\.com</manufacturerURL>\r\n\x20\x20\x20\x20
+SF:<modelDescription></modelDescription>\r\n\x20\x20\x20\x20<modelName>43U
+SF:M7290PTF</modelName>\r\n\x20\x20\x20\x20<modelURL>http://www\.lge\.com<
+SF:/modelURL>\r\n\x20\x20\x20\x20<modelNumber>WEBOS</modelNumber>\r\n\x20\
+SF:x20\x20\x20<serialNumber></serialNumber>\r\n\x20\x20\x20\x20<UDN>uuid:8
+SF:3914192-0fbb")%r(HTTPOptions,C0,"HTTP/1\.1\x20405\x20Bad\x20Request\r\n
+SF:Date:\x20Sat,\x2001\x20Jan\x202000\x2005:00:29\x20GMT\r\nServer:\x20Web
+SF:OS/1\.5\x20UPnP/1\.0\x20webOSTV/1\.0\r\nContent-Length:\x200\r\nConnect
+SF:ion:\x20close\r\nApplication-URL:\x20http://192\.168\.1\.11:36866/apps\
+SF:r\n\r\n")%r(RTSPRequest,AD,"HTTP/1\.1\x20405\x20Bad\x20Request\r\nDate:
+SF:\x20Sat,\x2001\x20Jan\x202000\x2005:00:29\x20GMT\r\nServer:\x20WebOS/1\
+SF:.5\x20UPnP/1\.0\x20webOSTV/1\.0\r\nContent-Length:\x200\r\nApplication-
+SF:URL:\x20http://192\.168\.1\.11:36866/apps\r\n\r\n")%r(FourOhFourRequest
+SF:,15D,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Sat,\x2001\x20Jan\x2
+SF:02000\x2005:00:44\x20GMT\r\nServer:\x20WebOS/1\.5\x20UPnP/1\.0\x20webOS
+SF:TV/1\.0\r\nContent-Length:\x20132\r\nContent-Type:\x20text/html\r\nConn
+SF:ection:\x20close\r\nApplication-URL:\x20http://192\.168\.1\.11:36866/ap
+SF:ps\r\n\r\n<html><head><title>404\x20Not\x20Found</title></head><body><h
+SF:1>Not\x20Found</h1><p>The\x20requested\x20URL\x20was\x20not\x20found\x2
+SF:0on\x20this\x20server\.</p></html>");
+Service Info: Device: media device
+
+Nmap scan report for 192.168.1.15
+Host is up (0.011s latency).
+Not shown: 998 closed tcp ports (conn-refused)
+PORT      STATE SERVICE    VERSION
+49155/tcp open  unknown
+62078/tcp open  tcpwrapped
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (8 hosts up) scanned in 283.73 seconds

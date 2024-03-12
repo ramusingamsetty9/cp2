@@ -99,3 +99,6 @@ while IFS= read -r ip || [[ -n "$ip" ]]; do
 done < "$input_file"
 
 echo "All dirb scans completed. Reports saved in the '$output_directory' directory."
+
+#Service Detection
+

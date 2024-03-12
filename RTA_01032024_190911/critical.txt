@@ -1,0 +1,72 @@
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-01 19:12 IST
+Nmap scan report for 192.168.1.5
+Host is up (0.0089s latency).
+Not shown: 3 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE       VERSION
+445/tcp  open  microsoft-ds?
+3306/tcp open  mysql         MySQL (unauthorized)
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: DESKTOP-9LB9Q18
+|   NetBIOS_Domain_Name: DESKTOP-9LB9Q18
+|   NetBIOS_Computer_Name: DESKTOP-9LB9Q18
+|   DNS_Domain_Name: DESKTOP-9LB9Q18
+|   DNS_Computer_Name: DESKTOP-9LB9Q18
+|   Product_Version: 10.0.19041
+|_  System_Time: 2024-03-01T13:43:06+00:00
+| ssl-cert: Subject: commonName=DESKTOP-9LB9Q18
+| Not valid before: 2024-02-11T13:51:55
+|_Not valid after:  2024-08-12T13:51:55
+|_ssl-date: 2024-03-01T13:43:46+00:00; +1s from scanner time.
+MAC Address: 64:00:6A:44:07:56 (Dell)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2024-03-01T13:43:06
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+|_nbstat: NetBIOS name: DESKTOP-9LB9Q18, NetBIOS user: <unknown>, NetBIOS MAC: 64:00:6a:44:07:56 (Dell)
+
+Nmap scan report for 192.168.1.5
+Host is up (0.011s latency).
+Not shown: 3 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE       VERSION
+445/tcp  open  microsoft-ds?
+3306/tcp open  mysql         MySQL (unauthorized)
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=DESKTOP-9LB9Q18
+| Not valid before: 2024-02-11T13:51:55
+|_Not valid after:  2024-08-12T13:51:55
+|_ssl-date: 2024-03-01T13:44:36+00:00; +1s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: DESKTOP-9LB9Q18
+|   NetBIOS_Domain_Name: DESKTOP-9LB9Q18
+|   NetBIOS_Computer_Name: DESKTOP-9LB9Q18
+|   DNS_Domain_Name: DESKTOP-9LB9Q18
+|   DNS_Computer_Name: DESKTOP-9LB9Q18
+|   Product_Version: 10.0.19041
+|_  System_Time: 2024-03-01T13:43:56+00:00
+MAC Address: 64:00:6A:44:07:56 (Dell)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2024-03-01T13:43:56
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+|_nbstat: NetBIOS name: DESKTOP-9LB9Q18, NetBIOS user: <unknown>, NetBIOS MAC: 64:00:6a:44:07:56 (Dell)
+
+Post-scan script results:
+| clock-skew: 
+|   0s: 
+|     192.168.1.5
+|_    192.168.1.5
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 512 IP addresses (4 hosts up) scanned in 100.08 seconds
