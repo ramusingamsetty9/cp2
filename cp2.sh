@@ -3,7 +3,7 @@
 echo "The script started execution"
 
 #deletion of existing folder
-echo"Do you want to delete previous data?"
+echo "Do you want to delete previous data?"
 read -p "Do you want to continue? (yes/no): " answer
 
 if [[ "$answer" =~ ^[Yy][Ee][Ss]$ ]]; then
