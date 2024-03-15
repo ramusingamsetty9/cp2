@@ -52,7 +52,7 @@ read -p "enter the CIDR range subnet: " cidr
 nmap -sC -sV -A "$ip_address"/$cidr | cat > nmap_scan.txt
 echo "network data stored to nmap_scan.txt"
 #critical ports open
-nmap -sC -sV -T4 -open -Pn -p 21,22,3306,3389,445,143 192.168.1.0/24 "$ip_address"/$cidr | cat > critical.txt
+nmap -sC -sV -T4 -open -Pn -p 21,22,3306,3389,445,143 "$ip_address"/$cidr | cat > critical.txt
 
 arp-scan --localnet --interface=$iface | cat > devices.txt
 
